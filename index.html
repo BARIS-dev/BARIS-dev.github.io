@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      body {
+        background-color: rgb(30, 30, 30);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .container {
+        justify-content: center;
+        align-items: center;
+        min-height: 35vh;
+        width: 90vw;
+        margin: 0;
+        padding: 1rem;
+        display: flex;
+        background: rgb(30, 30, 30);
+      }
+
+      .container li {
+        display: flex;
+        list-style: none;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        padding: 0;
+        font-size: 1.5rem;
+      }
+
+      .container a {
+        text-decoration: none;
+        color: white;
+        background: -webkit-linear-gradient(210deg, #ff66ff, #ff6666);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
+        border: 2px solid white;
+        border-radius: 25px;
+        padding: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .container a:hover {
+        background: -webkit-linear-gradient(210deg, #ff66ff, #ff6666);
+        -webkit-text-fill-color: rgb(30, 30, 30);
+      }
+
+      h1 {
+        font-size: 72px;
+        background: -webkit-linear-gradient(210deg, #ff66ff, #ff6666);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 4rem 0 2rem 2rem;
+      }
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <header>
+      <h1>BARIS Test Site</h1>
+      <h2>Hier sind Verlinkungen zu einigen Projekten und Tests:</h2>
+    </header>
+    <main>
+      <div class="container">
+        <ul>
+          <li>
+            <a href="./mylinks/">MyLinks</a>
+            <p>Meine Version von Linktree.</p>
+          </li>
+          <li>
+            <a href="./projectdci/">ProjectDCI</a>
+            <p>Meine Version des ProjectCS.</p>
+          </li>
+          <hr />
+          <li>
+            <a href="http://sbdci.de/" target="_blank" rel="noopener noreferrer"
+              >SBdci</a
+            >
+            <p>Die Website von Sebastian.</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 BARIS</p>
+    </footer>
+  </body>
+</html>
