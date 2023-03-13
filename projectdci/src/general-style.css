@@ -1,0 +1,30 @@
+:root {
+  --main-brand-color: #2e4f4f;
+  --primary-color: #2c3333;
+  --secondary-color: #0e8388;
+  --light-secondary-color: #cbe4de;
+  --text-color: white;
+  --secondary-text-color: #d6d6d6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 115%;
+}
+
+.subheading {
+  margin-top: 1rem;
+}

@@ -1,0 +1,92 @@
+.container {
+  width: 85vw;
+  height: 400px;
+  background-color: var(grey);
+  margin: 2rem auto;
+  display: flex;
+  box-shadow: 0px 3px black;
+}
+
+.col {
+  height: 100%;
+  flex: 1;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 25px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.col:nth-child(1) {
+  background: rgb(112, 80, 21);
+  background-image: url(../img/linux-avatar.png);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.col:nth-child(2) {
+  background: rgb(105, 97, 97);
+  background-image: url(../img/connections.png);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.col:nth-child(3) {
+  background: rgb(73, 37, 37);
+  background-image: url(../img/html-code.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+h2 {
+  text-shadow: 2px 2px black;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+
+.caption {
+  font-size: 1.2rem;
+  padding: 2rem;
+  border-radius: 25px;
+  display: none;
+}
+
+.caption p {
+  text-shadow: 2px 2px black;
+}
+
+.col img {
+  position: absolute;
+  width: 30%;
+  right: 2px;
+  bottom: 2px;
+  border-style: 2px solid whiteanimate__backInRight;
+}
+
+.col:hover {
+  flex-grow: 2;
+}
+
+.col:hover .caption {
+  display: block;
+}
+
+.col:hover h2 {
+  text-align: left;
+}
+
+.button {
+  border: 2px solid #fff;
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  width: 3rem;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
