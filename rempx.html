@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem/px Converter</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      html {
+        font-size: 20px;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        margin: 3rem;
+        text-align: center;
+        background-color: rgb(30, 30, 30);
+      }
+
+      h1 {
+        font-size: 4.2rem;
+        font-weight: 100;
+      }
+
+      .gradient {
+        background: linear-gradient(to right, #ff6666, #ff66ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      input,
+      button {
+        border: 2px solid #ff6666;
+        padding: 10px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      input {
+        width: 100px;
+      }
+
+      button {
+        cursor: pointer;
+        width: 200px;
+      }
+
+      .container {
+        border: 2px solid #ff6666;
+        border-radius: 25px;
+        padding: 20px;
+        margin: auto;
+        width: 50%;
+        margin-bottom: 2rem;
+      }
+
+      .back-home {
+        text-decoration: none;
+        font-weight: 200;
+        font-size: 0.9rem;
+      }
+    </style>
+
+    <script>
+      // Diese Funktion konvertiert rem in px
+      function convertRemToPixels(rem) {
+        // Hier wird die Root-PX aus dem Input-Feld gelesen
+        var rootPx = document.getElementById("root-px").value;
+        // Wenn keine Root-PX eingegeben wurde, wird der Standardwert 16 verwendet
+        if (rootPx == "") {
+          rootPx = 16;
+        }
+        return rem * rootPx;
+      }
+
+      // Diese Funktion konvertiert px in rem
+      function convertPixelsToRem(px) {
+        // Hier wird die Root-PX aus dem Input-Feld gelesen
+        var rootPx = document.getElementById("root-px").value;
+        // Wenn keine Root-PX eingegeben wurde, wird der Standardwert 16 verwendet
+        if (rootPx == "") {
+          rootPx = 16;
+        }
+        return px / rootPx;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Hier wird der Container-Element geöffnet -->
+    <h1 class="gradient">rem/px converter</h1>
+    <div class="container">
+      <p class="gradient">
+        <strong>root px</strong> value (default is 16):
+        <input type="number" id="root-px" class="gradient" />
+      </p>
+      <p class="gradient">
+        <strong>rem</strong> value:
+        <input type="number" id="rem-value" class="gradient" />
+      </p>
+      <p class="gradient">
+        <strong>px</strong> value:
+        <input type="number" id="px-value" class="gradient" />
+      </p>
+      <button onclick="convert()" class="gradient">Convert</button>
+      <p class="gradient">
+        The rem value in <strong>px</strong> is: <span id="rem-px"></span>
+      </p>
+      <p class="gradient">
+        The px value in <strong>rem</strong> is: <span id="px-rem"></span>
+      </p>
+    </div>
+    <!-- Hier wird der Container-Element geschlossen -->
+    <script>
+      // Diese Funktion wird aufgerufen, wenn der Convert-Button geklickt wird
+      function convert() {
+        // Hier werden die Werte aus den Input-Feldern gelesen
+        var remValue = document.getElementById("rem-value").value;
+        var pxValue = document.getElementById("px-value").value;
+        // Hier werden die Funktionen aufgerufen, um die Werte umzuwandeln
+        var remPx = convertRemToPixels(remValue);
+        var pxRem = convertPixelsToRem(pxValue);
+        // Hier werden die Ergebnisse in den Span-Elementen angezeigt
+        document.getElementById("rem-px").innerHTML = remPx;
+        document.getElementById("px-rem").innerHTML = pxRem;
+      }
+    </script>
+    <a href="./index.html" class="back-home gradient">Back to home</a>
+  </body>
+</html>
