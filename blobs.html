@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="./src/blobshape.js"></script>
+  </head>
+  <body>
+    <div id="blob-container"></div>
+    <script>
+      // Get the blob container element
+      const blobContainer = document.getElementById("blob-container");
+      // Set the seed value for the blob shape
+      const seedValue = "30283";
+      // Generate the blob shape with the seed value
+      const { path } = blobshape({ seed: seedValue });
+      // Create a new SVG element
+      const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      // Set the view box attribute
+      svg.setAttribute("viewBox", "0 0 100 100");
+      // Create a new path element
+      const pathElement = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "path"
+      );
+      // Set the d attribute with the path value
+      pathElement.setAttribute("d", path);
+      // Set the fill attribute with the color value
+      pathElement.setAttribute("fill", "#d1d8e0");
+      // Append the path element to the svg element
+      svg.appendChild(pathElement);
+      // Append the svg element to the blob container element
+      blobContainer.appendChild(svg);
+    </script>
+  </body>
+</html>
