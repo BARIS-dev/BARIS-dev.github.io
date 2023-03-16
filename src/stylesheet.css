@@ -24,18 +24,14 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: rgb(32, 32, 32);
-  position: sticky;
   position: -webkit-sticky; /* Just for Apple Safari -.- */
+  position: sticky;
   top: 0;
   width: 100%;
 }
 
-li {
-  float: left;
-}
-
 li a {
-  display: block;
+  display: flex;
   color: beige;
   text-align: center;
   padding: 8px 16px;
