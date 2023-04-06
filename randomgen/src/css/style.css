@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(../img/moygWYd.jpeg) center/cover fixed no-repeat;
+}
+
+.button-container h2,
+.button-container #output {
+  margin-bottom: 2rem;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 100%;
+}
+
+td {
+  padding: min-content 10px;
+}
+td:nth-child(odd) {
+  background-color: #8686861a;
+}
+
+tr:nth-child(even) {
+  background-color: #e5e5ead2;
+}
+tr:nth-child(odd) {
+  background-color: #c7c7c7e1;
+}
+tr:hover {
+  background-color: rgba(84, 173, 255, 0.418);
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
+.window {
+  width: 85vw;
+  height: 85vh;
+  margin: 3rem auto 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #b0b0b5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5e5eadc;
+  backdrop-filter: blur(15px);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "button table table table";
+  overflow: hidden;
+}
+
+.table-container {
+  grid-area: table;
+  width: 100%;
+  height: 90%;
+  margin: 64px 0;
+}
+
+.button-container {
+  grid-area: button;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.button-container label {
+  margin-bottom: 1rem;
+}
+
+.titlebar {
+  height: 40px;
+  background-color: #e5e5ea;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.titlebar h1 {
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.close,
+.minimize,
+.maximize {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.close {
+  background-color: #ff605c;
+}
+
+.minimize {
+  background-color: #ffbd44;
+}
+
+.maximize {
+  background-color: #00ca4e;
+}
+
+.draw-btn {
+  background: linear-gradient(to bottom, rgb(48, 131, 255), rgb(17, 82, 126));
+  border-radius: 20px;
+  padding: 0.4rem 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 1px 1px 6px rgb(51, 51, 51);
+}
+
+.draw-btn:hover {
+  background: linear-gradient(to bottom, rgb(17, 82, 126), rgb(48, 131, 255));
+  box-shadow: inset 1px 1px 6px rgb(51, 51, 51);
+}
+
+.reset-btn {
+  background: linear-gradient(
+    to bottom,
+    rgba(166, 196, 241, 0.397),
+    rgba(105, 151, 182, 0.397)
+  );
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.856);
+}
+
+.reset-btn:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(105, 151, 182, 0.397),
+    rgba(166, 196, 241, 0.397)
+  );
+}
+
+#output {
+  font-size: 2rem;
+  font-weight: 500;
+  content: "";
+  margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "button table table";
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "button"
+      "table";
+    overflow: scroll;
+    justify-content: center;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 60%;
+  }
+}
