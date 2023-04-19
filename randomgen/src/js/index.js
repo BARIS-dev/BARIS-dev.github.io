@@ -123,3 +123,54 @@ function showName(name) {
 
 // Call the initCounts function when the page loads
 window.onload = initCounts;
+
+// Get the macos window element
+var macosWindow = document.getElementById("macos-window");
+
+// Get the macos header element
+var macosHeader = document.getElementById("macos-header");
+
+// Initialize the offset variables
+var offsetX = (offsetY = null);
+
+// Add a mousedown event listener to the macos header
+macosHeader.addEventListener("mousedown", function (event) {
+  // Get the current mouse position
+  var mouseX = event.clientX;
+  var mouseY = event.clientY;
+
+  // Get the current window position
+  var windowX = macosWindow.offsetLeft;
+  var windowY = macosWindow.offsetTop;
+
+  // Calculate the offset between the mouse and the window
+  offsetX = mouseX - windowX;
+  offsetY = mouseY - windowY;
+
+  // Set a flag to indicate that the window is being dragged
+  macosWindow.dragging = true;
+});
+
+// Add a mousemove event listener to the document
+document.addEventListener("mousemove", function (event) {
+  // Check if the window is being dragged
+  if (macosWindow.dragging) {
+    // Get the current mouse position
+    var mouseX = event.clientX;
+    var mouseY = event.clientY;
+
+    // Calculate the new window position based on the offset
+    var windowX = mouseX - offsetX;
+    var windowY = mouseY - offsetY;
+
+    // Set the new window position
+    macosWindow.style.left = windowX + "px";
+    macosWindow.style.top = windowY + "px";
+  }
+});
+
+// Add a mouseup event listener to the document
+document.addEventListener("mouseup", function (event) {
+  // Set the flag to indicate that the window is not being dragged anymore
+  macosWindow.dragging = false;
+});

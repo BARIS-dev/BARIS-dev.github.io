@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./moygWYd.jpeg) center/cover fixed no-repeat;
+}
+
+.button-container h2,
+.button-container #output {
+  margin-bottom: 2rem;
+}
+
+#macos-window {
+  width: 800px;
+  height: min-content;
+  border: 1px solid #b0b0b5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e5e5eadc;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+#macos-header {
+  height: 30px;
+  background-color: #e0e0e000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#macos-close {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ff605c;
+  position: absolute;
+  top: 7.5px;
+  left: 7.5px;
+}
+
+#macos-minimize {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffbd44;
+  position: absolute;
+  top: 7.5px;
+  left: 30px;
+}
+
+#macos-maximize {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #00ca4e;
+  position: absolute;
+  top: 7.5px;
+  left: 52.5px;
+}
+
+#macos-content {
+  height: calc(100% - #macos-header);
+  text-align: center;
+  padding: 30px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+td {
+  padding: mincontent 10px;
+}
+td:nth-child(odd) {
+  background-color: #8686861a;
+}
+
+tr:nth-child(even) {
+  background-color: #e5e5ead2;
+}
+tr:nth-child(odd) {
+  background-color: #c7c7c7e1;
+}
+tr:hover {
+  background-color: rgba(84, 173, 255, 0.418);
+}
+
+.striked {
+  text-decoration: line-through;
+  color: #ff605c;
+}
+
+.table-container {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  grid-area: button;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container label {
+  margin-bottom: 1rem;
+}
+
+.titlebar {
+  height: 40px;
+  background-color: #e5e5ea;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.titlebar h1 {
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+
+.draw-btn {
+  background: linear-gradient(to bottom, rgb(48, 131, 255), rgb(17, 82, 126));
+  border-radius: 20px;
+  padding: 0.4rem 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 1px 1px 6px rgb(51, 51, 51);
+}
+
+.draw-btn:hover {
+  background: linear-gradient(to bottom, rgb(17, 82, 126), rgb(48, 131, 255));
+  box-shadow: inset 1px 1px 6px rgb(51, 51, 51);
+}
+
+.reset-btn {
+  background: linear-gradient(
+    to bottom,
+    rgba(166, 196, 241, 0.397),
+    rgba(105, 151, 182, 0.397)
+  );
+  border-radius: 20px;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.856);
+}
+
+.reset-btn:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(105, 151, 182, 0.397),
+    rgba(166, 196, 241, 0.397)
+  );
+}
+
+#output {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 2em;
+}
