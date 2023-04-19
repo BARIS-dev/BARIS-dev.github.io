@@ -5,9 +5,14 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: url(./moygWYd.jpeg) center/cover fixed no-repeat;
+  height: 100%;
 }
 
 .button-container h2,
