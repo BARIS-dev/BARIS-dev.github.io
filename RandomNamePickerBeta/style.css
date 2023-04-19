@@ -13,6 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: url(./moygWYd.jpeg) center/cover fixed no-repeat;
   height: 100%;
+  overflow: hidden;
 }
 
 .button-container h2,
@@ -29,8 +30,8 @@ body {
   background-color: #e5e5eadc;
   backdrop-filter: blur(10px);
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 30px;
+  left: 100px;
 }
 
 #macos-header {
@@ -73,7 +74,7 @@ body {
 #macos-content {
   height: calc(100% - #macos-header);
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 }
 
 table {
