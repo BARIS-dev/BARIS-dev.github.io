@@ -197,3 +197,11 @@ tr:hover {
   justify-content: space-between;
   margin: 1em 2em;
 }
+
+.draw-reset {
+  height: 100px;
+}
+
+.draw-reset p {
+  margin-top: 1.5em;
+}

@@ -209,3 +209,11 @@ tr:hover {
     width: 60%;
   }
 }
+
+.draw-reset {
+  height: 100px;
+}
+
+.draw-reset p {
+  margin-top: 1em;
+}
