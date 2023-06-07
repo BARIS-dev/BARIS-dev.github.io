@@ -64,7 +64,6 @@ var names = [
   "Kai",
   "Kim",
   "Manuel",
-  "Michelle",
   "Ömer",
   "Sebastian",
   "Valeri",
